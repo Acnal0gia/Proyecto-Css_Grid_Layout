@@ -1,0 +1,41 @@
+.navegation{
+    &__list{
+        &__item{
+        /*Es mas facil hacerlo con flexbox pero por las circunstancias no  de puede usar*/
+            display: inline-block;
+
+            &__link{
+                @extend %font-regular;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
+//Navegacion del head.
+.navegation__list--head{
+    margin-top: $channel;
+}
+
+.navegation__list__item--head{
+    margin-right: $channel;
+}
+.navegation__list__item--head:last-child{
+    border: 1px solid $blue;
+    padding: 0 5px;
+}
+
+.navegation__list__item__link--head{
+    color: $blue;
+}
+
+
+//navegacion del foot
+.navegation__list__item--foot{
+    margin-right: $channel;
+}
+
+.navegation__list__item__link--foot{
+    color: $blue;
+}

@@ -1,0 +1,15 @@
+@media(max-width : 1024px){
+    .head,
+    .main,
+    .foot{
+        grid-column: 1 / -1;
+    }
+    .navegation--head{
+        display: none;
+    }
+    .icon{
+        display: inline-block;
+        margin: $channel $channel 0 0;
+    }
+
+}

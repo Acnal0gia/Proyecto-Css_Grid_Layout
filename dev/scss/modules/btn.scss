@@ -1,0 +1,14 @@
+.btn{
+    border: none;
+    line-height: 2rem;
+    padding: 0 15px;
+}
+
+.btn--foot{
+    margin-top: $channel;
+    margin-left: 40%; // No es adecuado pero por las circunstancia realize el centrado de esta manera.
+    background: none;
+    color: $blue;
+    border: 1px solid $blue;
+}
+

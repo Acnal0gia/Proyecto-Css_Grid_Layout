@@ -1,0 +1,52 @@
+/*
+    Trate de Realizar la pagina solo con css Grid, por este motivo en lugares de la pagina hay formas 
+    incorrectas para realizar lo necesario "hacks" como por ejemplo en el centrado de algunos elementos,
+    tambien en algunos casos utilize estos "hacks" para solucionar algunos problemas que daba css grid 
+    ya que desconocia la manera de solucionarlo de una forma mas practica con esta como por ejemplo la
+    altura de algunos elementos al cambiar las columnas por filas o viceversa.
+
+    Posiblemente en un futuro para solucionar estas  observaciones.
+*/
+  
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
+
+//Paleta de Colores.
+:root{
+    --blue: #00adb5;
+    --gray: #f6f5f5;
+    --black: #222831;
+    --light-black: #393e46;
+    
+}
+
+$blue: var(--blue);
+$black: var(--black);
+$gray: var(--gray);
+$light-black: var(--light-black);
+
+//Tipografia
+$titi: 'Titillium Web', sans-serif;
+$regular: 400;
+$bold: 600;
+
+$channel: 1em;
+
+%font-regular{
+    font-family: $titi;
+    font-weight: $regular;
+}
+
+%font-bold{
+    font-family: $titi;
+    font-weight: $bold;
+    text-transform: uppercase;
+}
+
+%pseudo{
+    content: "";
+    display: inline-block;
+    
+    border-bottom: 5px solid $blue;
+
+    position: absolute;
+}

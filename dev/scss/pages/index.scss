@@ -1,0 +1,243 @@
+.head,
+.main,
+.foot{
+    grid-column: 5 / 21;
+
+}
+
+.head{
+    background: $light-black;
+    padding: $channel;
+
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    
+    &__logo{
+        @extend %font-bold;
+        font-size: 2rem;
+        padding: $channel / 2;
+        line-height: 2rem;
+
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+
+    }
+
+    &__banner{
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+
+        width: 100%;
+        height: 60vh;
+    }
+
+    &__titles{
+        @extend %font-bold;
+        
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        justify-self: center;
+        align-self: center;
+
+
+        &__title{
+            color: $gray;
+            text-align: center;
+            font-size: 4rem;
+            line-height: 4rem;
+        }
+
+        &__subtitle{
+            color: $gray;
+            text-align: center;
+            
+            position: relative;
+
+            &::before{
+                @extend %pseudo;
+                width: 60px;
+                bottom: -5px;
+                left: 40%;
+            }
+        }
+    }
+
+    &__navegation{
+        grid-column: 3 / -1;
+        grid-row: 1 / 2;
+
+        justify-self: end;
+    }
+
+}
+
+.main{
+    background: $black;
+
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+}
+
+.articles{
+    margin: 0 $channel * 2;
+    margin-top: $channel * 3;
+
+    grid-row: 1 / 2;
+
+    &__title{
+        @extend %font-bold;
+        color: $blue;
+        position: relative;
+        text-align: center;
+
+        &::before{
+            @extend %pseudo;
+            width: 50px;
+            background: $blue;
+            bottom: -5px;
+            left: 47%;
+        }
+    }
+
+    &__container{
+        margin-top: $channel * 3;
+        display: grid;
+        grid-gap: $channel;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+        &__cart{
+            background: $light-black;
+
+
+            &__image{
+                width: 100%;
+            }   
+            
+            &__info{
+                padding: $channel * 3;
+                color: $blue;
+                @extend %font-regular;
+                text-align: center;
+                position: relative;
+
+                &::before{
+                    @extend %pseudo;
+                    color: $blue;
+                    position: absolute;
+                    width: 30px;
+                    top: 40px;
+                    left: 43%;
+                }
+            }
+        }
+    }
+}
+
+.about{
+    grid-row: 2 / 3;
+    margin-top: $channel * 5;
+    background: $light-black;
+    
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+
+    &__image{
+        width: 100%;
+        height: 100%;
+    }
+
+    &__container{
+        color: $gray;
+        text-align: center;
+        padding: $channel * 5;
+
+        &__title{
+            color: $blue;
+            position: relative;
+            @extend %font-bold;
+
+            &::before{
+                @extend %pseudo;
+                color: $blue;
+                position: absolute;
+                width: 30px;
+                left: 46%;
+                bottom: -5px;
+            
+            }            
+        }
+
+        &__info{
+            margin-top: $channel;
+            @extend %font-regular;
+        }
+    }
+}
+
+
+.foot{
+    background: $black;
+    &__info{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: .5fr 1fr .5fr;
+
+        &__title,
+        &__span,
+        &__form{
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+        &__title{
+            margin-top: $channel;
+            text-align: center;
+            @extend %font-bold;
+            color: $blue;
+
+        }
+
+        &__span{
+            margin-top: $channel * 3;
+            text-align: center;
+            @extend %font-regular;
+            color: $blue;
+
+        }
+
+        &__form{
+            margin-top: $channel * 5;
+            
+            &__input{
+                display: block;
+                width: 100%;
+                line-height: 2.5rem;
+                background: $light-black;
+                border:none;
+                color: $gray;
+                padding-left: 10px;
+                @extend %font-regular;
+                font-size: 1rem;
+            }
+
+        }
+    }
+
+    &__final{
+        background: $light-black;
+        height: 5rem;
+
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+
+        &__icons{
+            align-self: center;
+        }
+
+        &__navegation{
+            justify-self: end;
+            align-self: center;
+        }
+    }
+}

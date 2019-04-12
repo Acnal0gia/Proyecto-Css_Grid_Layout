@@ -1,0 +1,80 @@
+@media(max-width : 480px){
+    //No es recomendable hacerlo de esta manera
+    //pero se realizo debido a las circunstancias.
+        
+    .main{
+        height: 1900px;
+    }
+
+    .about{
+        margin-left: $channel;
+        margin-right: $channel;
+        height: 600px;
+
+        grid-template-columns: none;
+        grid-template-rows: 300px 300px;
+
+        &__image{
+            width: 100%;
+            height: 300px;
+            grid-row: 1 / 2;
+        }
+    
+        &__container{
+            grid-row: 2 / 3;
+            padding: $channel * 2;
+            
+
+        }
+
+    }
+
+    .foot{
+        &__info{
+            &__title,
+            &__span,
+            &__form{
+                grid-column: 1 / -1;
+                grid-row: 2 / 3;
+            }
+
+            &__form{
+                margin-left: $channel * 2;
+                margin-right: $channel * 2;
+
+            }
+        }
+        
+        &__final{
+            grid-template-columns: none;
+            grid-template-rows: 1fr 1fr;
+            height: auto;
+
+    
+            &__icons{
+                margin-top: $channel;
+                justify-self: center;
+                align-self: center;
+                grid-row: 2 / 3;
+            }
+    
+            &__navegation{
+                justify-self: center;
+                align-self: center;
+            }
+        }
+    }
+
+    //navegacion del foot
+    .navegation__list__item--foot{
+        margin: $channel 0 0;
+        display: block;
+        text-align: center;
+    }
+
+    .navegation__list__item__link--foot{
+        color: $blue;
+    }
+
+}
+ 
